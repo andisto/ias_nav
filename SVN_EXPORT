@@ -1,0 +1,91 @@
+commit 464c1aa7b5cb8488b8b97b48e5b7426068b2b513
+Author: Thomas Ruehr <ruehr@in.tum.de>
+Date:   Thu Apr 21 12:01:26 2011 +0200
+
+    minor adjustments of map
+
+commit 500b9cb3d972229429b78247c758220e7a01860c
+Author: Thomas Ruehr <ruehr@in.tum.de>
+Date:   Thu Apr 21 11:07:42 2011 +0200
+
+    didi it again
+
+commit 1267d3401c4bba8bf75dbec6875c11424aa3b12b
+Author: Thomas Ruehr <ruehr@in.tum.de>
+Date:   Thu Apr 21 10:54:57 2011 +0200
+
+    pimped the map
+
+commit 3ae8a65c39d9e2c9fb972710533641740e45b747
+Author: Thomas Ruehr <ruehr@in.tum.de>
+Date:   Wed Apr 20 16:21:37 2011 +0200
+
+    adjusted new nav_pcontroller params to fit with pr2
+
+commit a2fc83353363ff7d654813d6c4df51b9c996a6c4
+Author: Thomas Ruehr <ruehr@in.tum.de>
+Date:   Wed Apr 20 16:16:51 2011 +0200
+
+    adjusted new nav_pcontroller params to fit with pr2
+
+commit 2d52c11597cb2ee400a3b69e2330ba415540cf42
+Author: Ingo Kresse <kresse@in.tum.de>
+Date:   Wed Apr 20 16:03:09 2011 +0200
+
+    renamed global_frame parameter to odom_frame (makes more sense)
+
+commit 0cf6c2b5e4325d75483668f6af2e1e6d7fd2b1cb
+Author: Ingo Kresse <kresse@in.tum.de>
+Date:   Wed Apr 20 15:56:57 2011 +0200
+
+    made nav_pcontroller frames a ROS param (should work on pr2 again)
+
+commit d0b9ce4e6312693f861728f5fd5a40d39f225028
+Author: Ingo Kresse <kresse@in.tum.de>
+Date:   Tue Apr 19 16:05:15 2011 +0200
+
+    nav_pcontroller: (finally) renamed variables top and bottom
+
+commit 0d57128d2d62a272bafebea1ffae83b04e4ac1aa
+Author: Thomas Ruehr <ruehr@in.tum.de>
+Date:   Tue Apr 19 10:52:26 2011 +0200
+
+    pr2_2dnav changed to new map
+
+commit bc7a461dbed87f0bbaf6d202a26fdf162b059179
+Author: Thomas Ruehr <ruehr@in.tum.de>
+Date:   Tue Apr 19 09:25:49 2011 +0200
+
+    map (C) bob ross
+
+commit b4690ad0fa1a0b241c687f3133f5678248fd03af
+Author: Ingo Kresse <kresse@in.tum.de>
+Date:   Wed Apr 13 19:07:23 2011 +0200
+
+    improved nav_pcontroller, works in simulation (tm)
+    
+      - a lot of cleanups
+      - store in odom frame
+        -> accounts for different laser timestamps
+        -> control rate now depends on tf rate rather than laser freqency
+      - throw away far away points (saves a lot computation time)
+      - do 3-point derivative on distance function (waste some computation time, also adjusted derivation step to current velocity)
+      - uses now-avaliable second derivative to "dampen" first derivative (gets rid of instability, yippie!)
+
+commit 9ce2a9de072a775ea6b197806ab82a252b9d22ba
+Author: Thomas Ruehr <ruehr@in.tum.de>
+Date:   Mon Nov 8 15:49:12 2010 +0100
+
+    back to karlstrasse map
+
+commit 6670fb06f34a71fcef1d0bca895799dc5be18565
+Author: Alexis Maldonado <maldonado@tum.de>
+Date:   Sun Oct 31 19:33:43 2010 +0100
+
+    nav_pcontroller: Fix a typo so it uses the correct frame for navigating
+
+commit 869b5dea5b32890a59988c87b49f4983f5d84d53
+Author: Lorenz Moesenlechner <moesenle@in.tum.de>
+Date:   Sun Oct 31 17:30:52 2010 +0100
+
+    Re-export of nav_pcontroller
